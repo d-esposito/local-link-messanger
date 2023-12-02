@@ -1,0 +1,18 @@
+.message {
+    background: #6b7da1;
+    padding: 0.5em;
+    margin: 0.5em 0 0.5em 0;
+    border-radius: 0.5em;
+}
+
+.message-text {
+    margin: 0 0 1em 0;
+}
+
+.message-info, .message-info > p {
+    margin: 0;
+    color: #464a58;
+
+    display: flex;
+    justify-content: space-between;
+}
