@@ -1,7 +1,7 @@
 import { React, useState } from "react";
 import './MessageBox.css';
 
-const MessageBox = () => {
+const MessageBox = ({ sendMessage }) => {
     const [messageText, setMessageText] = useState('');
 
     const handleMessageChange = (e) => {
@@ -10,7 +10,12 @@ const MessageBox = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log('Submitted message: ', messageText);
+        const message = {
+            senderUsername: "User",
+            unixTimestamp: Date.now(),
+            messageText: messageText
+        };
+        sendMessage(JSON.stringify(message));
         setMessageText('');
     }
 
