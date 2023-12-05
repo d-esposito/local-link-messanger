@@ -15,7 +15,7 @@ textarea {
     border: none;
 
     resize: none;
-    overflow-y: scroll;
+    overflow: hidden;
 
     background: none;
     color: #dbdbdb;

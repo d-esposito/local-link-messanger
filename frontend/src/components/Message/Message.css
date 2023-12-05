@@ -6,6 +6,7 @@
 }
 
 .message-text {
+    overflow-wrap: break-word;
     margin: 0 0 1em 0;
 }
 

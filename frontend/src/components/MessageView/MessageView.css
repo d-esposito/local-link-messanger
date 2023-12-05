@@ -1,6 +1,7 @@
 .message-view {
     overflow-y: auto;
     max-height: 90vh;
+    width: 50vw;
     padding: 10px;
     margin-bottom: 1em;
   }
