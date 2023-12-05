@@ -1,12 +1,22 @@
 version: '3'
 services:
-  frontend:
-    build:
-      context: ./frontend
+  database:
+    image: mongo:7.0.4
     ports:
-      - 80:80
+      - 27017:27017
+
   backend:
     build:
       context: ./backend
     ports:
       - 8081:8081
+    depends_on:
+      - database
+
+  frontend:
+    build:
+      context: ./frontend
+    ports:
+      - 80:80
+    depends_on:
+      - backend
