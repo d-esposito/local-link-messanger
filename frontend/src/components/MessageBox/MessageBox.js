@@ -1,8 +1,10 @@
-import { React, useState } from "react";
+import { React, useState, useContext } from "react";
+import { UsernameContext } from "../../contexts/UsernameContext";
 import './MessageBox.css';
 
 const MessageBox = ({ sendMessage }) => {
     const [messageText, setMessageText] = useState('');
+    const { username, setNewUsername } = useContext(UsernameContext);
 
     const handleMessageChange = (e) => {
         setMessageText(e.target.value);
@@ -11,7 +13,7 @@ const MessageBox = ({ sendMessage }) => {
     const handleSubmit = (e) => {
         e.preventDefault();
         const message = {
-            senderUsername: "User",
+            senderUsername: username,
             unixTimestamp: Date.now(),
             messageText: messageText
         };

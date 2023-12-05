@@ -1,0 +1,15 @@
+.username-changer {
+    position: absolute;
+    top: 1em;
+    left: 1em;
+    width: 15em;
+    padding: 0.5em;
+
+    border: 2px solid #6b7da1;
+    border-radius: 0.5em;
+}
+
+.username-changer:focus {
+    border: 2px solid #6b7da1;
+    border-radius: 0.5em;
+}

@@ -2,6 +2,8 @@ import { React, useState, useEffect } from 'react';
 
 import MessageView from './components/MessageView';
 import MessageBox from './components/MessageBox';
+import UsernameChanger from './components/UsernameChanger';
+import { UsernameProvider } from './contexts/UsernameContext';
 
 function App() {
   const [messages, setMessages] = useState([]);
@@ -39,10 +41,11 @@ function App() {
   }
 
   return (
-    <>
+    <UsernameProvider>
+      <UsernameChanger/>
       <MessageView messages={messages}/>
       <MessageBox sendMessage={sendMessage}/>
-    </>
+    </UsernameProvider>
   );
 }
 
