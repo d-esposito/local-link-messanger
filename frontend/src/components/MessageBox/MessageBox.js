@@ -1,4 +1,4 @@
-import { React, useState, useContext } from "react";
+import React, { useState, useContext } from "react";
 import { UsernameContext } from "../../contexts/UsernameContext";
 import './MessageBox.css';
 

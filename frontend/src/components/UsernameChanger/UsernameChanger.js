@@ -1,4 +1,4 @@
-import { React, useContext } from 'react';
+import React, { useContext } from 'react';
 import { UsernameContext } from '../../contexts/UsernameContext';
 import './UsernameChanger.css';
 
@@ -16,6 +16,7 @@ const UsernameChanger = () => {
             rows={1}
             value={username}
             onChange={handleUsernameChange}
+            spellCheck={false}
         />
     )
 }

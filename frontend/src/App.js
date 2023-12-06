@@ -1,4 +1,4 @@
-import { React, useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import MessageView from './components/MessageView';
 import MessageBox from './components/MessageBox';
@@ -30,7 +30,7 @@ function App() {
         }
       }
     }
-  }, [])
+  }, []);
 
   const sendMessage = (message) => {
     socket.send(message);
