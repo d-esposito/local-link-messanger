@@ -12,10 +12,6 @@ function App() {
   useEffect(() => {
     if (!socket) {
       const newSocket = new WebSocket('ws://localhost:8081/');
-
-      newSocket.onopen = () => {
-        console.log("Connected to WebSocket server");
-      }
   
       newSocket.addEventListener('message', (e) => {
         try {
